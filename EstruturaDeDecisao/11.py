@@ -8,32 +8,27 @@
 # o percentual de aumento aplicado;
 # o valor do aumento;
 # o novo salário, após o aumento.
+
 salario = float(input("Digite seu salario: "))
+
 if salario <= 280:
-    salario_porcentagem = salario*0.2
-    salario_total = salario_porcentagem + salario
-    print("Salario antes do reajuste: ", salario)
-    print("Percentual de aumento aplicado: 20%")
-    print("Valor do aumento: ", salario_porcentagem)
-    print("Novo salario: ", salario_total)
+        porcentagem = "20%" 
+        salario_porcentagem = salario * 0.2
+        salario_total = salario_porcentagem + salario
 elif salario > 280 and salario <= 700:
-    salario_porcentagem = salario*0.15
-    salario_total = salario_porcentagem + salario
-    print("Salario antes do reajuste: ", salario)
-    print("Percentual de aumento aplicado: 15%")
-    print("Valor do aumento: ", salario_porcentagem)
-    print("Novo salario: ", salario_total)
+        porcentagem = "15%" 
+        salario_porcentagem = salario * 0.15
+        salario_total = salario_porcentagem + salario
 elif salario > 700 and salario <= 1500:
-    salario_porcentagem = salario*0.1
-    salario_total = salario_porcentagem + salario
-    print("Salario antes do reajuste: ", salario)
-    print("Percentual de aumento aplicado: 10%")
-    print("Valor do aumento: ", salario_porcentagem)
-    print("Novo salario: ", salario_total)
-else:
-    salario_porcentagem = salario*0.05
-    salario_total = salario_porcentagem + salario
-    print("Salario antes do reajuste: ", salario)
-    print("Percentual de aumento aplicado: 5%")
-    print("Valor do aumento: ", salario_porcentagem)
-    print("Novo salario: ", salario_total)
+        porcentagem = "10%" 
+        salario_porcentagem = salario * 0.1
+        salario_total = salario_porcentagem + salario
+else: 
+        porcentagem = "5%" 
+        salario_porcentagem = salario * 0.5
+        salario_total = salario_porcentagem + salario
+
+print("Salario antes do reajuste: ", salario)
+print("Percentual do aumento aplicado: ", porcentagem)
+print("Valor do aumento: ", salario_porcentagem)
+print("Novo salario: ", salario_total)

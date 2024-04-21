@@ -10,6 +10,7 @@
 #         FGTS (11%)                      : R$  121,00
 #         Total de descontos              : R$  165,00
 #         Salário Liquido                 : R$  935,00
+
 valor_hora = float(input("Digite quanto vc ganha por hora: "))
 quantidade_horas = int(input("Digite a quantidade de horas trabalhadas: "))
 salario_bruto = valor_hora * quantidade_horas
@@ -18,45 +19,30 @@ if salario_bruto <= 900:
     fgts = salario_bruto*0.11
     total_descontos = inss + fgts
     salario_liquido = salario_bruto - total_descontos
-    print(f"Salario Bruto: ({valor_hora} * {quantidade_horas}) : R${salario_bruto}")
-    print(f"IR - Isento : R$0")
-    print(f"INSS - 10% : R${inss}")
-    print(f"FGTS - 11% : R${fgts}")
-    print(f"Total de descontos : R${total_descontos}")
-    print(f"Salario Liquido : R${salario_liquido}")
+    
 elif salario_bruto <= 1500:
     ir = salario_bruto*0.05
     inss = salario_bruto*0.10
     fgts = salario_bruto*0.11
     total_descontos = inss + fgts + ir
     salario_liquido = salario_bruto - total_descontos
-    print(f"Salario Bruto: ({valor_hora} * {quantidade_horas}) : R${salario_bruto}")
-    print(f"IR - 5%: R${ir}")
-    print(f"INSS - 10% : R${inss}")
-    print(f"FGTS - 11% : R${fgts}")
-    print(f"Total de descontos : R${total_descontos}")
-    print(f"Salario Liquido : R${salario_liquido}")
+
 elif salario_bruto <= 2500:
     ir = salario_bruto*0.10
     inss = salario_bruto*0.10
     fgts = salario_bruto*0.11
     total_descontos = inss + fgts + ir
     salario_liquido = salario_bruto - total_descontos
-    print(f"Salario Bruto: ({valor_hora} * {quantidade_horas}) : R${salario_bruto}")
-    print(f"IR - 10%: R${ir}")
-    print(f"INSS - 10% : R${inss}")
-    print(f"FGTS - 11% : R${fgts}")
-    print(f"Total de descontos : R${total_descontos}")
-    print(f"Salario Liquido : R${salario_liquido}")
+
 elif salario_bruto > 2500:
     ir = salario_bruto*0.20
     inss = salario_bruto*0.10
     fgts = salario_bruto*0.11
     total_descontos = inss + fgts + ir
     salario_liquido = salario_bruto - total_descontos
-    print(f"Salario Bruto: ({valor_hora} * {quantidade_horas}) : R${salario_bruto}")
-    print(f"IR - 20%: R${ir}")
-    print(f"INSS - 10% : R${inss}")
-    print(f"FGTS - 11% : R${fgts}")
-    print(f"Total de descontos : R${total_descontos}")
-    print(f"Salario Liquido : R${salario_liquido}")
+
+print(f"Salario Bruto: ({valor_hora} * {quantidade_horas}) : R${salario_bruto}")
+print(f"INSS - 10% : R${inss}")
+print(f"FGTS - 11% : R${fgts}")
+print(f"Total de descontos : R${total_descontos}")
+print(f"Salario Liquido : R${salario_liquido}")
